@@ -1,0 +1,47 @@
+dn: dc=projak,dc=org
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: projak
+
+dn: ou=groups,dc=projak,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=projak,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=mari,ou=people,dc=projak,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Mari
+sn: Ravi
+uid: mari
+userPassword: $2a$07$TK4o4Uq99Imwu4yf.g80z.M5vZAFO.wgiCRsYdDh.RoYLDu2XapiS
+
+dn: uid=jinesh,ou=people,dc=projak,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Jinesh
+sn: Padayachi
+uid: jinesh
+userPassword: $2a$07$r31ujRJrXOnfMmV3K2W9oewkS9PJyhtWc7KwL0ExQtK6lRimVMt2S
+
+dn: cn=admin,ou=groups,dc=projak,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: admin
+uniqueMember: uid=mari,ou=people,dc=projak,dc=org
+
+dn: cn=user,ou=groups,dc=projak,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: user
+uniqueMember: uid=jinesh,ou=people,dc=projak,dc=org
